@@ -1,0 +1,168 @@
+{
+    "name": "Input",
+    "maps": [
+        {
+            "name": "Game",
+            "id": "4da706d8-f7b1-4b4e-b73e-d7cc08fc8ace",
+            "actions": [
+                {
+                    "name": "BlueTap",
+                    "id": "8cebaf9a-1a10-41e9-aef6-26357c1e9898",
+                    "expectedControlLayout": "Button",
+                    "continuous": false,
+                    "passThrough": false,
+                    "processors": "",
+                    "interactions": "Tap,Hold",
+                    "bindings": []
+                },
+                {
+                    "name": "RedTap",
+                    "id": "09e34963-f276-4257-80df-6cb4a078eb9a",
+                    "expectedControlLayout": "Button",
+                    "continuous": false,
+                    "passThrough": false,
+                    "processors": "",
+                    "interactions": "Tap,Hold",
+                    "bindings": []
+                },
+                {
+                    "name": "GreenTap",
+                    "id": "b287d552-200e-4b28-b119-2f72cf8274a3",
+                    "expectedControlLayout": "Button",
+                    "continuous": false,
+                    "passThrough": false,
+                    "processors": "",
+                    "interactions": "Tap,Hold",
+                    "bindings": []
+                },
+                {
+                    "name": "Fader",
+                    "id": "d28714aa-63b8-43c0-917b-c51b1e689ab5",
+                    "expectedControlLayout": "Axis",
+                    "continuous": false,
+                    "passThrough": false,
+                    "processors": "",
+                    "interactions": "",
+                    "bindings": []
+                },
+                {
+                    "name": "Knob",
+                    "id": "43dac248-5ad2-40ce-9c3a-8954e391a1ea",
+                    "expectedControlLayout": "Axis",
+                    "continuous": false,
+                    "passThrough": false,
+                    "processors": "",
+                    "interactions": "",
+                    "bindings": []
+                },
+                {
+                    "name": "Euphoria",
+                    "id": "7c93016e-56bc-4026-9c25-9def37bde968",
+                    "expectedControlLayout": "",
+                    "continuous": false,
+                    "passThrough": false,
+                    "processors": "",
+                    "interactions": "Tap,Hold",
+                    "bindings": []
+                },
+                {
+                    "name": "Turntable",
+                    "id": "d9129029-ecef-4039-92bf-cf57346fc1c2",
+                    "expectedControlLayout": "Axis",
+                    "continuous": false,
+                    "passThrough": false,
+                    "processors": "",
+                    "interactions": "",
+                    "bindings": []
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "BlueTap",
+                    "chainWithPrevious": false,
+                    "isComposite": false,
+                    "isPartOfComposite": false,
+                    "modifiers": ""
+                },
+                {
+                    "name": "",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RedTap",
+                    "chainWithPrevious": false,
+                    "isComposite": false,
+                    "isPartOfComposite": false,
+                    "modifiers": ""
+                },
+                {
+                    "name": "",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "Tap,Hold",
+                    "processors": "",
+                    "groups": "",
+                    "action": "GreenTap",
+                    "chainWithPrevious": false,
+                    "isComposite": false,
+                    "isPartOfComposite": false,
+                    "modifiers": ""
+                },
+                {
+                    "name": "",
+                    "path": "<Gamepad>/rightStick/y",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Fader",
+                    "chainWithPrevious": false,
+                    "isComposite": false,
+                    "isPartOfComposite": false,
+                    "modifiers": ""
+                },
+                {
+                    "name": "",
+                    "path": "<Gamepad>/rightStick/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Knob",
+                    "chainWithPrevious": false,
+                    "isComposite": false,
+                    "isPartOfComposite": false,
+                    "modifiers": ""
+                },
+                {
+                    "name": "",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Euphoria",
+                    "chainWithPrevious": false,
+                    "isComposite": false,
+                    "isPartOfComposite": false,
+                    "modifiers": ""
+                },
+                {
+                    "name": "",
+                    "path": "<Gamepad>/leftStick/y",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Turntable",
+                    "chainWithPrevious": false,
+                    "isComposite": false,
+                    "isPartOfComposite": false,
+                    "modifiers": ""
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
