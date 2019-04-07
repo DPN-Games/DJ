@@ -25,30 +25,21 @@ class NoteController : MonoBehaviour {
         NoteSprite = Resources.Load<Sprite>("Sprites/Note");
     }
 
-    internal void Init (Note data) {
+    internal void Init (Note data, float speed) {
         noteData = data;
         startPos = noteData.lane.Position();
+        transform.position = startPos;
         endPos = startPos;
         endPos.y *= -1;
         endPos.y -= 1;
 
         timeStarted = Time.time;
-        timeLength = 1f;
+        timeLength = speed;
 
         SpriteRenderer spriteRenderer = gameObject.AddComponent<SpriteRenderer>();
         spriteRenderer.sprite = NoteSprite;
 
-        switch (data.color) {
-            case Note.NoteColor.Blue:
-                spriteRenderer.color = Color.blue;
-                break;
-            case Note.NoteColor.Red:
-                spriteRenderer.color = Color.red;
-                break;
-            case Note.NoteColor.Green:
-                spriteRenderer.color = Color.green;
-                break;
-        }
+        spriteRenderer.color = data.color.GetColorFromNoteColor();
     }
 
     private void Update () {

@@ -11,6 +11,7 @@ public class MapEvent {
     public EventType type;
 
     public MapEvent (EventType type, float time) {
+        this.time = time;
     }
     
     public enum EventType {

@@ -18,12 +18,4 @@ MonoBehaviour:
   Seconds: 32
   Length: 152
   Song: {fileID: 8300000, guid: 4f143919378d3d24fae05be2c8fca01d, type: 3}
-  Notes:
-  - time: 10
-    type: 0
-    color: 2
-    lane: 0
-  - time: 10
-    type: 0
-    color: 1
-    lane: -1
+  Notes: []

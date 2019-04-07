@@ -10,10 +10,12 @@ public class Note : MapEvent
     [SerializeField] internal NoteColor color;
     [SerializeField] internal NoteLane lane;
 
-    public Note (float time, NoteColor color, NoteLane lane) : base(EventType.Note, time) {
-        this.color = color;
+    public Note (float time, NoteLane lane) : base(EventType.Note, time) {
+        color = ((int)lane).GetColorFromLane();
         this.lane = lane;
     }
+
+    public Note(float time, int lane) : this(time, (NoteLane)lane) { }
 
     public enum NoteColor {
         Green = 1,

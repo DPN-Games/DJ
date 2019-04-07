@@ -16,6 +16,6 @@ MonoBehaviour:
   BPM: 175
   Minutes: 1
   Seconds: 20
-  Length: 0
+  Length: 80
   Song: {fileID: 8300000, guid: 192005a59f63ba444ac6ebc9cc574591, type: 3}
   Notes: []
