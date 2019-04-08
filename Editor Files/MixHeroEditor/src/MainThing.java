@@ -30,6 +30,33 @@ public class MainThing {
                 HorizontalTrack.updateUI();
             }
         });
+        rewindButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                horizScroll.setValue(horizScroll.getValue()-1);
+                HorizontalTrack.updateUI();
+            }
+        });
+        playButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
+        seekButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                horizScroll.setValue(horizScroll.getValue()+1);
+                HorizontalTrack.updateUI();
+            }
+        });
+        skiptoEndButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                horizScroll.setValue(horizScroll.getMaximum());
+                HorizontalTrack.updateUI();
+            }
+        });
     }
     public JPanel getContent(){
         return content;
@@ -44,7 +71,7 @@ public class MainThing {
         int Green = Integer.parseInt(notesData[1]);
         int Red = Integer.parseInt(notesData[2]);
         int Blue = Integer.parseInt(notesData[3]);
-        int rigthBlue = Integer.parseInt(notesData[4]);
+        int rightBlue = Integer.parseInt(notesData[4]);
         String event = notesData[5];
         ArrayList<String> events = new ArrayList<>();
         if(event.contains(";")){
