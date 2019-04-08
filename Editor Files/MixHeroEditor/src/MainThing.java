@@ -1,3 +1,5 @@
+import com.sun.source.tree.SynchronizedTree;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -17,6 +19,7 @@ public class MainThing {
     private JButton seekButton;
     private JButton skiptoEndButton;
     private JPanel buttonPanel;
+    private JScrollPane VerticalScrollPane;
 
     public MainThing(){
         HorizontalTrack.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
@@ -57,6 +60,9 @@ public class MainThing {
                 HorizontalTrack.updateUI();
             }
         });
+        JScrollBar verticalScrollBar = new JScrollBar();
+        verticalScrollBar.setOrientation(Adjustable.VERTICAL);
+        VerticalScrollPane.setVerticalScrollBar(verticalScrollBar);
     }
     public JPanel getContent(){
         return content;
