@@ -1,0 +1,69 @@
+#NOTE BASED EVENTS
+#Note based events are placed here, under the tag [notes].
+[notes]
+
+#There are 5 lanes, from left to right, greenbent, green, red, blue, bluebent.
+#All of these lanes can be in one of six states; none, normal note, held note, scratch note, and stop.
+
+#We represent this with a list of numbers per millisecond event. If nothing happens at that millisecond, no line is needed.
+
+#EXAMPLE: 
+
+#      G,g,r,b,B
+
+5400 = 0,1,0,0,0
+#(5.4 seconds in, a green note)
+
+8500 = 0,0,2,0,0
+9500 = 0,0,4,0,0
+#(At 8.5 seconds in, a red note is held for 1 second)
+
+#If an event happens at the millisecond denoted, a sixth list element with a string is added to the line.
+
+#fl = fadeleft
+#fr = faderight
+#fs = freestyle
+#ek = effect knob
+#rp = rewind power
+
+#EXAMPLE: 
+
+12000 = 0,1,0,0,0
+12500 = 0,0,0,0,0,fl
+13000 = 0,0,0,0,0,fr
+13500 = 0,4,0,0,0
+
+#(At 12 seconds in, a held green note is played, fades to the left and then the right, and stops after 1.5 seconds)
+
+#Multiple events can be denoted using a semicolon between event names.
+
+#EXAMPLE:
+
+15000 = 0,1,0,0,0,ek;rp
+
+#(At 15 seconds, a green note with Effect Knob and Rewind Power.)
+
+#NON NOTE-BASED EVENTS
+
+#Lyric events and section events are placed here, under the tag [events].
+[events]
+
+#Section events are denoted as section:"Section Name" at the given millisecond.
+
+#EXAMPLE:
+
+5000 = section:"Intro"
+
+#Lyrics use Clone Hero syntax. Hyphens join sylablles, equal signs translate to hyphens in game.
+#Denoted as lyric:"Lyric"
+#Spaces are auto-added after words with no hyphen at the end.
+#Phrases begin with phrase_start and end with phrase_end.
+
+10000 = phrase_start
+10500 = lyric:"I"
+10600 = lyric:"walk"
+10700 = lyric:"a"
+10800 = lyric:"lone-"
+10900 = lyric:"ly"
+11000 = lyric:"road,"
+11001 = phrase_end
