@@ -50,12 +50,12 @@ internal class BeatmapController : MonoBehaviour {
         }
     }
 
-    [MenuItem("DJ/Create Note/Red _7")]
+    [MenuItem("DJ/Create Note/Red _8")]
     static void CreateRedNote () {
         Notes.Add(new Note(0f, Note.NoteLane.Red));
     }
 
-    [MenuItem("DJ/Create Note/Green _8")]
+    [MenuItem("DJ/Create Note/Green _7")]
     static void CreateGreenNote () {
         Notes.Add(new Note(0f, Note.NoteLane.Green));
     }

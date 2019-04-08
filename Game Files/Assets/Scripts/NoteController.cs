@@ -31,7 +31,7 @@ class NoteController : MonoBehaviour {
         transform.position = startPos;
         endPos = startPos;
         endPos.y *= -1;
-        endPos.y -= 1;
+        endPos.y += 3;
 
         timeStarted = Time.time;
         timeLength = speed;
@@ -49,7 +49,5 @@ class NoteController : MonoBehaviour {
         if(transform.position == endPos) {
             Destroy(gameObject);
         }
-
-        distanceToFret = transform.position.y - 3;
     }
 }

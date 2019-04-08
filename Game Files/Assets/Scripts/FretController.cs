@@ -14,6 +14,7 @@ public class FretController : MonoBehaviour {
     List<NoteController> notes = new List<NoteController>();
 
     new SpriteRenderer renderer;
+    [SerializeField] LineRenderer laneLine;
 
     void Start () {
         renderer = GetComponent<SpriteRenderer>();
@@ -39,12 +40,17 @@ public class FretController : MonoBehaviour {
             notes.Add(note);
         }
     }
+       
+   
 
     void CheckHit () {
         if (notes.Count == 0) return;
 
         var noteToCheck = notes[0];
-        Debug.Log(noteToCheck.distanceToFret);
+
+        if (noteToCheck == null) return;
+
+        Debug.Log(noteToCheck.transform.position.y - transform.position.y);
         notes.Remove(noteToCheck);
     }
 
