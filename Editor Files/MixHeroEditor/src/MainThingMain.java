@@ -1,14 +1,42 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.*;
 
 public class MainThingMain {
+    private static MainThing mainer = new MainThing();
     public static void main(String[] args){
         JFrame frame = new JFrame();
         JMenuBar mb = new JMenuBar();
         //File Menu
         JMenu fileMenu = new JMenu("File");
         JMenuItem newButton = new JMenuItem("New");
+        newButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String fileName = JOptionPane.showInputDialog(null, "Name of the Chart?");
+                File newFile = new File(fileName+".txt");
+                mainer.setWorkingFile(newFile);
+                BufferedWriter writer;
+                try{
+                    writer = new BufferedWriter(new FileWriter(newFile.getAbsoluteFile()));
+                    writer.write("==TRACK DATA==");
+                    writer.close();
+                }
+                catch(IOException ex){
+                    System.out.println("Error");
+                }
+            }
+        });
         JMenuItem loadButton = new JMenuItem("Load");
+        loadButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                final JFileChooser fc = new JFileChooser();
+                mainer.setWorkingFile(fc.getSelectedFile());
+            }
+        });
         JMenuItem saveButton = new JMenuItem("Save");
         JMenuItem saveAsButton = new JMenuItem("Save As");
         JMenuItem quicksaveButton = new JMenuItem("Quick Save");
