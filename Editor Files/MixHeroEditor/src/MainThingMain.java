@@ -1,4 +1,6 @@
 import javax.swing.*;
+import javax.swing.filechooser.FileSystemView;
+import javax.swing.plaf.FileChooserUI;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -33,8 +35,13 @@ public class MainThingMain {
         loadButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                final JFileChooser fc = new JFileChooser();
-                mainer.setWorkingFile(fc.getSelectedFile());
+                JFileChooser fc = new JFileChooser();
+                int choice = fc.showOpenDialog(null);
+                if(choice != JFileChooser.APPROVE_OPTION){
+                    return;
+                }
+                File chosenFile = fc.getSelectedFile();
+                mainer.setWorkingFile(chosenFile);
             }
         });
         JMenuItem saveButton = new JMenuItem("Save");
