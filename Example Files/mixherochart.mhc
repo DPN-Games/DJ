@@ -70,3 +70,10 @@
 10900 = lyric:"ly"
 11000 = lyric:"road,"
 11001 = phrase_end
+12000 = phrase_start
+12001 = lyric:"Uh=-"
+12500 = lyric:"oh."
+12501 = phrase_end
+
+#COMMENTS
+#You can make comments using the # symbol at the beginning of a line.
